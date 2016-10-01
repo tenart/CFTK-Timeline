@@ -34,7 +34,9 @@ $(function() {
         
         yearIndex = year - yearFirst + 1;
         var percentage = 100 * (yearIndex/yearTotal);       // Calculates the progress through the timeline    
-        $('#progress').css('width', percentage + '%');      // Sets the proper width for the progress bar
+        $('#progress').animate({ 
+            width: percentage + '%'                         // Animates the proper width for the progress bar
+        }, 100);               
         
         $('.year').attr("id","");                                               // Clears all other .year class elements of the #focus
         $('#ruler .year:nth-child(' + yearIndex + ')').attr("id","focus");      // Adds the #focus id to the proper child in the ruler
