@@ -131,10 +131,6 @@ li:before {
     box-shadow: 0 0 0px 1px rgba(255, 255, 255, 0.6)
 }
 
-#tip {
-    background: #6D6E71;
-}
-
 #controls {
     text-align: center;
     padding: 20px 0;
@@ -185,10 +181,28 @@ li:before {
 }
 
 #progress {
-    background: #7CC9AA;
     width: 1%;
-    height: 3px;
-    margin-top: -2px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    text-align: right;
+    margin-top: -10px;
+    padding-top: 8px;
+}
+
+#bar {
+    height: 3px;
+    background: #7CC9AA;
+    width: 100%;
+    border-radius: 100px;
+    margin-bottom: -12px;
+    margin-top: 
+}
+
+#progress p {
+    padding: 3px 5px;
+    background: #7CC9AA;
+    display: inline-block;
+    text-align: center;
+    font-size: 8px;
+    border-radius: 5px;
+    color: white;
 }

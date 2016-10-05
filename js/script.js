@@ -28,18 +28,23 @@ $(function() {
     });
     
     function showYear(year) {
-        $('.yr').slideUp(200);                              // Hides all info blocks
-        $('#' + year).slideDown(200);                       // Displays current year info block
-        $('#controls h1').text(yearCurrent);                // Displays the correct year in the control bar
-        
         yearIndex = year - yearFirst + 1;
         var percentage = 100 * (yearIndex/yearTotal);       // Calculates the progress through the timeline    
+        
+        $('.yr').slideUp(200);                              // Hides all info blocks
+        $('#' + year).slideDown(200);                       // Displays current year info block
+        
+        $('#controls h1').text(yearCurrent);                // Displays the correct year in the control bar
+        
         $('#progress').animate({ 
             width: percentage + '%'                         // Animates the proper width for the progress bar
-        }, 100);               
+        }, 100);  
+        $('#progress p').text(yearIndex + '/' + yearTotal);
         
         $('.year').attr("id","");                                               // Clears all other .year class elements of the #focus
         $('#ruler .year:nth-child(' + yearIndex + ')').attr("id","focus");      // Adds the #focus id to the proper child in the ruler
+        
+        
     }
         
 })
