@@ -22,7 +22,7 @@ $(function() {
     
     $('#prev').click(function() {
         if ( yearCurrent > yearFirst ) {
-            yearCurrent --;                                 // Increments yearCUrrent by -1
+            yearCurrent --;                                 // Increments yearCurrent by -1
             showYear(yearCurrent);                          // Updates timeline
         };
     });
@@ -31,19 +31,18 @@ $(function() {
         yearIndex = year - yearFirst + 1;
         var percentage = 100 * (yearIndex/yearTotal);       // Calculates the progress through the timeline    
         
-        $('.yr').slideUp(200);                              // Hides all info blocks
-        $('#' + year).slideDown(200);                       // Displays current year info block
+        $('.yr').slideUp(150);                              // Hides all info blocks
+        $('#' + year).slideDown(150);                       // Displays current year info block
         
         $('#controls h1').text(yearCurrent);                // Displays the correct year in the control bar
         
         $('#progress').animate({ 
             width: percentage + '%'                         // Animates the proper width for the progress bar
-        }, 100);  
-        $('#progress p').text(yearIndex + '/' + yearTotal);
+        }, 50, 'linear');  
+        $('#progress p').text(yearIndex + '/' + yearTotal); // Displays page information
         
         $('.year').attr("id","");                                               // Clears all other .year class elements of the #focus
-        $('#ruler .year:nth-child(' + yearIndex + ')').attr("id","focus");      // Adds the #focus id to the proper child in the ruler
-        
+        $('#ruler .year:nth-child(' + yearIndex + ')').attr("id","focus");      // Adds the #focus id to the proper child in the ruler 
         
     }
         
