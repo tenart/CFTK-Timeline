@@ -39,7 +39,7 @@ $(function() {
         $('#progress').animate({ 
             width: percentage + '%'                         // Animates the proper width for the progress bar
         }, 50, 'linear');  
-        $('#progress p').text(yearIndex + '/' + yearTotal); // Displays page information
+        $('#progress p').text(yearIndex + '/' + yearTotal); // Displays page number in the progress bar
         
         $('.year').attr("id","");                                               // Clears all other .year class elements of the #focus
         $('#ruler .year:nth-child(' + yearIndex + ')').attr("id","focus");      // Adds the #focus id to the proper child in the ruler 
