@@ -38,8 +38,8 @@ p {
 }
 
 .year:nth-child(1) h1,
-.year:nth-child(4n+1) h1,
-.year:last-child h1 {
+.year:last-child h1,
+h1.mark {
     background: transparent;
     font-size: 15px;
     width: 80px;

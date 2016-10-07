@@ -1,10 +1,19 @@
 $(function() {
     
-    yearFirst = $('#ruler .year:nth-child(1) h1').text();   // Finds the first year in the timeline
-    yearLast = $('#ruler .year:last-child h1').text();      // Finds the last year in the timeline
+    // These parameters can be modified
+    
     yearCurrent = 1999;                                     // Sets the starting year for the timeline to display
+    tickMark = 4;                                           // Change the marking interval of the ruler
+    
+    // Everything below should not be modified
+    
+    yearFirst = $('#ruler .year:nth-child(1) h1').text();   // Finds the first year in the timeline
+    yearLast = $('#ruler .year:last-child h1').text();      // Finds the last year in the timeline  
     yearTotal = $('#ruler').children().length;              // Calculates the total number of years in the timeline
     yearIndex = yearCurrent - yearFirst + 1;                // Calculates the index of the current active year
+    
+    
+    $('.year:nth-child(' + tickMark + 'n+1) h1').addClass('mark');              // Formats the ruler with the given tickMark
                 
     showYear(yearCurrent);                                  // Initializes timeline
     
