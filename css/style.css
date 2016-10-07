@@ -21,6 +21,10 @@ p {
     padding: 30px;
 }
 
+.center {
+    text-align: center;
+}
+
 br {
     height: 0px;
 }
@@ -230,4 +234,10 @@ li:before {
     border-radius: 5px;
     color: white;
     font-weight: 100;
+}
+
+/*----------------Builder styling below------------------*/
+
+@build_frame p, input {
+    display: inline-block;
 }
