@@ -1,12 +1,12 @@
 h1 {
     font-family: 'Raleway', sans-serif;
+    font-size: 20px;
 }
 
 p {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     color: gray;
-    text-align: center;
     font-weight: 100;
 }
 
@@ -15,6 +15,14 @@ p {
     min-width: 200px;
     margin: 20px auto;
     display: block;
+}
+
+.padding {
+    padding: 30px;
+}
+
+br {
+    height: 0px;
 }
 
 #ruler {
@@ -61,7 +69,7 @@ h1.mark {
     width: calc(100% - 80px);
 }
 
-.info_block {
+.card {
     font-family: 'Open Sans', sans-serif;
     margin: 10px 30px;
     padding: 20px;
@@ -90,7 +98,7 @@ li:before {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.info_block h1 {
+.card h1 {
     font-size: 40px;
     height: 50px;
     margin: -80px -20px 20px;
@@ -100,7 +108,7 @@ li:before {
     font-style: italic;
 }
 
-.info_block img {
+.card img {
     width: 100%;
     display: block;
     min-width: 400px;
