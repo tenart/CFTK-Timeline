@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <title>History - Carolina For The Kids</title>
+        <link href="../css/reset.css" rel="stylesheet" type="text/css">
+        <link href="../css/style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="wrapper" class="build">
+            <div class="padding">
+                <h1>CFTK Timeline Card Building Tool</h1>
+                <p>Use this tool to generate the HTML code for a card that can be pasted into the main index.html</p>
+                <br>
+                <div class="build_dark build_frame">
+                    <input id="build_year" type="number" placeholder="Year (required)">
+                    <input id="build_photo" type="text" placeholder="Banner photo direct URL (recommended)">
+                    <input id="build_flickr" type="text" placeholder="Flickr album URL (recommended)">
+                </div>
+                <div class="build_light build_frame">
+                    <h1>Content (at least 1 item)</h1>
+                    <p>Content should be in the form of a bulleted list, no period at the end of each item</p>
+                    <span style="font-size: 0; text-align: center;">
+                        <div class="build_button" id="b_left">+</div>
+                        <div class="build_button" id="b_right">-</div>
+                    </span>
+                    <span id="content_input">
+                        <input type="text" class="litem" placeholder="List item">
+                    </span>
+                </div>
+                <br>
+                <div class="build_button" id="generate">Generate</div>
+                <br>
+                <br>
+                <div id="output"></div>
+                <br>
+                <div id="build_preview"></div>
+            </div>
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="../js/build.js"></script>
+    </body>
+</html>

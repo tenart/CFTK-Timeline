@@ -238,6 +238,148 @@ li:before {
 
 /*----------------Builder styling below------------------*/
 
-@build_frame p, input {
+br {
+    font-size: 0px;
+}
+
+.build_frame {
+    padding: 20px;
+}
+
+.build_dark {
+    background: #484848;
+    color: white;
+    border-radius: 4px 4px 0 0;
+}
+
+.build_light {
+    background: #f0f0f0;
+    border-radius: 0 0 4px 3px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.09);
+    color: #535353;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #cccccc;
+}
+
+.build_light p, .build_light input {
+    color: #535353;
+}
+
+.build_dark input {
+    color: white;
+}
+
+input {
+    background: none;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+    display: block;
+    width: 100%;
+    outline: none;
+    border-bottom: 1px dotted rgba(128, 128, 128, 0.42);
+    margin-top: 10px;
+}
+
+#build_year {
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 0;
+}
+
+.build h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.build p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+input.litem {
+    background: url(../bullet-arrow.png) no-repeat center left;
+    background-size: 4px;
+    padding-left: 10px;
+    width: calc(100% - 10px);
+}
+
+.build_button {
     display: inline-block;
+    min-width: 25px;
+    text-align: center;
+    font-size: initial;
+    padding: 8px;
+    border: 1px solid #a5a5a5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #a5a5a5;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.build_button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+#b_left {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+}
+
+#b_right {
+    border-radius: 0 4px 4px 0;
+}
+
+#generate {
+    background: #afd34f;
+    border-color: #95b246;
+    color: white;
+}
+
+#generate:hover {
+    background: #9fc142;
+    border-color: #859f3f;
+}
+
+#gethtml {
+    background: #65acff;
+    border-color: #4981c3;
+    color: white;
+}
+
+#gethtml:hover {
+    background: #4c86cb;
+    border-color: #4175b2;
+    color: white;
+}
+
+#build_preview .card {
+    display: block;
+    margin: 0;
+}
+
+#build_preview .card h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#output {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 2px;
+    font-family: monospace;
+    color: #535353;
+    display: none;
 }
