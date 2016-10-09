@@ -374,12 +374,12 @@ input.litem {
     margin-bottom: 20px;
 }
 
+
 #output {
-    background: #fff;
-    padding: 20px;
+    background: #ffffff;
     border: 1px solid #e6e6e6;
     border-radius: 2px;
     font-family: monospace;
-    color: #535353;
     display: none;
+    padding: 20px;
 }

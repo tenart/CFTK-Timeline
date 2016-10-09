@@ -23,25 +23,32 @@ $(function() {
             var flickrURL = $('#build_flickr').val();
             
             $('#build_preview').empty();
+                                                                            // Generates a card with the given template
             
-            if ( imageURL.length > 0) {                                     // Generate a card with the given template
+            $('#build_preview').append( '<div class="card yr" id="' + buildYear + '">\n\t<div class="img_container">\n\t\t<a href="" target="_blank"></a>\n\t\t<img src="">\n\t</div>\n\t<h1>' + buildYear + '</h1>\n\t<ul>\n</ul>\n</div>' );
+            
+            if ( imageURL.length == 0) {                                     
                 
-                $('#build_preview').append( '<div class="card yr" id="' + buildYear + '"><div class="img_container"><a href="' + flickrURL + '" target="_blank"></a><img src="' + imageURL + '"></div><h1>' + buildYear + '</h1><ul></ul></div>' );
-
-                
-                
-            } else {                                                        // If no image URl is assigned, the generated card will have the nopics class
-                
-                $('#build_preview').append( '<div class="card yr nopics" id="' + buildYear + '"><div class="img_container"><a href="" target="_blank"></a><img src=""></div><h1>' + buildYear + '</h1><ul></ul></div>' );
+                $('.card').addClass('nopics')                               // Checks if an image URL has been provided and if not adds the nopics class
                 
             };
             
             $('.litem').each(function( index ) {
-                $('.card ul').append( '<li>' + $(this).val() + '</li>' );   // Iterates through the list item inputs and properly add them to the card
+                $('.card ul').append( '\t\t<li>' + $(this).val() + '</li>\n' );   // Iterates through the list item inputs and properly add them to the card
             });
             
-            $('#output').text($('#build_preview').html());                  // Outputs the plain HTML code
-            $('#output').show();
+            $('.card ul').append('\t</ul>');
+            
+            $('#output').text($('#build_preview').html());                  // Pushes the plain HTML code to #output
+            
+            hljs.configure({
+                tabReplace: '     '                                         // Configures highlight.js to replace tab characters with 5 spaces because I like my tabs to have 5 spaces and anyone who uses 4 can leave :)
+            });
+            $('#output').each(function(i, block) {
+                hljs.highlightBlock(block);                                 // Calls for highlight.js to prettify the code output dynamically
+            });
+            
+            $('#output').show();                                            // Displays the #output
             
         } else {
             

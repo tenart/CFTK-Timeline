@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <title>History - Carolina For The Kids</title>
+        <title>Timeline Card Builder</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700" rel="stylesheet">
+        <link href="../css/highlight-arduino.css" type="text/css" rel="stylesheet" />
     </head>
     <body>
         
@@ -35,7 +36,9 @@
                 <div class="build_button" id="generate">Generate</div>
                 <br>
                 <br>
-                <div id="output"></div>
+                <pre class="html" id="output">
+                    
+                </pre>
                 <br>
                 <div id="build_preview"></div>
             </div>
@@ -43,5 +46,8 @@
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="../js/build.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <!--USES HIGHLIGHT.JS AND ARDUINO-LIGHT.CSS THEME TO PRETTIFY CODE OUTPUT, SEE NOTES IN BUILD.JS-->
+
     </body>
 </html>
