@@ -6,7 +6,7 @@
         <title>Timeline Card Builder</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Cutive+Mono" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Inconsolata" rel="stylesheet">
         <link href="../css/highlight-arduino.css" type="text/css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/97ce0e4483.js"></script>
     </head>
@@ -20,8 +20,10 @@
                 <div class="build_dark build_frame">
                     <h1>Header &nbsp;<i class="fa fa-calendar-check-o"></i></h1>
                     <input id="build_year" type="number" placeholder="Year (required)">
-                    <input id="build_photo" type="text" placeholder="Banner photo direct URL (recommended)">
+                    <input id="build_photo" type="text" placeholder="Banner photo Flickr BBC embed code (recommended)">
                     <input id="build_flickr" type="text" placeholder="Flickr album URL (recommended)">
+                    <div id="img_preview_bg"></div>
+                    <div id="img_preview"></div>
                 </div>
                 <div class="build_light build_frame">
                     <h1>Content &nbsp;<i class="fa fa-list"></i></h1>

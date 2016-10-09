@@ -3,15 +3,33 @@ $(function() {
     listItem = $('#content_input').html(); // Grabs the list item template from the HTML document
     
     $('#b_right').click(function() {
+        
         if ( $('#content_input').children().length > 1) {
             $('#content_input input:last-child').remove();                  // Removes a list item from the input list and changes focus
             $('#content_input input:last-child').focus();
         };
+        
     });
     
     $('#b_left').click(function() {
+        
         $('#content_input').append(listItem);                               // Adds a list item to the input list and changes focus
         $('#content_input input:last-child').focus();
+        
+    });
+    
+    $('#build_photo').blur(function() {
+        
+        var embedURL = $('#build_photo').val();                             
+        var start = embedURL.indexOf('[img]') + 5;                          // Finds the two matching [img] and [/img] BBC markup
+        var lengt = embedURL.indexOf('[/img]') - start;                     // Calculates the length of the URL within the embed code
+        
+        if ( start > 5 ) {
+            $('#build_photo').val(embedURL.substr(start, lengt));           // If the provided input is a BBC embed then pull out the direct image URL
+        }
+        
+        $('#img_preview').css('background-image',"url(" + $('#build_photo').val() + ")")    // Updates the preview's background image
+
     });
     
     $('#generate').click(function() {    
@@ -57,3 +75,5 @@ $(function() {
     });
         
 })
+
+// [url=https://flic.kr/p/dh5P3h][img]https://c1.staticflickr.com/9/8031/8058283840_6010c3f9e4_k.jpg[/img][/url][url=https://flic.kr/p/dh5P3h]Untitled[/url] by [url=https://www.flickr.com/photos/carolinaftk/]Carolina For The Kids Foundation[/url], on Flickr
