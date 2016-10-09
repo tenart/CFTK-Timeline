@@ -6,41 +6,44 @@
         <title>Timeline Card Builder</title>
         <link href="../css/reset.css" rel="stylesheet" type="text/css">
         <link href="../css/style.css" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Raleway:300,400,600,700|Cutive+Mono" rel="stylesheet">
         <link href="../css/highlight-arduino.css" type="text/css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/97ce0e4483.js"></script>
     </head>
     <body>
         
         <div id="wrapper" class="build">
             <div class="padding">
-                <h1>CFTK Timeline Card Building Tool</h1>
-                <p>Use this tool to generate the HTML code for a card that can be pasted into the main index.html</p>
+                <h1>CFTK Timeline Card Building Tool <i class="fa fa-cogs"></i></h1>
+                <p>Use this tool to generate the HTML code for a card that can be pasted into the main index.html. Just input the required information and click the 'Generate' button</p>
                 <br>
                 <div class="build_dark build_frame">
+                    <h1>Header &nbsp;<i class="fa fa-calendar-check-o"></i></h1>
                     <input id="build_year" type="number" placeholder="Year (required)">
                     <input id="build_photo" type="text" placeholder="Banner photo direct URL (recommended)">
                     <input id="build_flickr" type="text" placeholder="Flickr album URL (recommended)">
                 </div>
                 <div class="build_light build_frame">
-                    <h1>Content (at least 1 item)</h1>
-                    <p>Content should be in the form of a bulleted list, no period at the end of each item</p>
+                    <h1>Content &nbsp;<i class="fa fa-list"></i></h1>
+                    <p>Content should be in the form of a bulleted list, no period at the end of each entry</p>
                     <span style="font-size: 0; text-align: center;">
-                        <div class="build_button" id="b_left">+</div>
-                        <div class="build_button" id="b_right">-</div>
+                        <div class="build_button" id="b_left"><i class="fa fa-plus"></i></div>
+                        <div class="build_button" id="b_right"><i class="fa fa-minus"></i></div>
                     </span>
                     <span id="content_input">
-                        <input type="text" class="litem" placeholder="List item">
+                        <input type="text" class="litem" placeholder="List item (required)">
                     </span>
                 </div>
                 <br>
-                <div class="build_button" id="generate">Generate</div>
+                <div class="build_button" id="generate">Generate &nbsp;<i class="fa fa-wrench"></i></div>
                 <br>
                 <br>
                 <pre class="html" id="output">
                     
                 </pre>
                 <br>
-                <div id="build_preview"></div>
+                <div id="build_preview">
+                </div>
             </div>
         </div>
         

@@ -1,6 +1,6 @@
 $(function() {
     
-    listItem = '<input type="text" class="litem" placeholder="List item">'; // Defines template for list item
+    listItem = $('#content_input').html(); // Grabs the list item template from the HTML document
     
     $('#b_right').click(function() {
         if ( $('#content_input').children().length > 1) {
@@ -25,7 +25,7 @@ $(function() {
             $('#build_preview').empty();
                                                                             // Generates a card with the given template
             
-            $('#build_preview').append( '<div class="card yr" id="' + buildYear + '">\n\t<div class="img_container">\n\t\t<a href="" target="_blank"></a>\n\t\t<img src="">\n\t</div>\n\t<h1>' + buildYear + '</h1>\n\t<ul>\n</ul>\n</div>' );
+            $('#build_preview').append( '<div class="card yr" id="' + buildYear + '">\n\t<div class="img_container">\n\t\t<a href="' + flickrURL + '" target="_blank"></a>\n\t\t<img src="' + imageURL + '">\n\t</div>\n\t<h1>' + buildYear + '</h1>\n\t<ul>\n</ul>\n</div>' );
             
             if ( imageURL.length == 0) {                                     
                 
@@ -41,9 +41,7 @@ $(function() {
             
             $('#output').text($('#build_preview').html());                  // Pushes the plain HTML code to #output
             
-            hljs.configure({
-                tabReplace: '     '                                         // Configures highlight.js to replace tab characters with 5 spaces because I like my tabs to have 5 spaces and anyone who uses 4 can leave :)
-            });
+         
             $('#output').each(function(i, block) {
                 hljs.highlightBlock(block);                                 // Calls for highlight.js to prettify the code output dynamically
             });
