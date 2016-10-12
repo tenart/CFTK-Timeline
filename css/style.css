@@ -408,3 +408,7 @@ input.litem {
     background-image: url();
     background-size: cover;
 }
+
+.hidden {
+    display: none;
+}

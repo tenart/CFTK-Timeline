@@ -64,7 +64,7 @@ $(function() {
                 hljs.highlightBlock(block);                                 // Calls for highlight.js to prettify the code output dynamically
             });
             
-            $('#output').show();                                            // Displays the #output
+            $('.hidden').show();                                            // Displays all hidden elements
             
         } else {
             
