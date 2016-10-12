@@ -43,11 +43,11 @@ hue-6-2: #c18401
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e45649;
+  color: #F78A72;
 }
 
 .hljs-literal {
-  color: #0184bb;
+  color: #0075A3;
 }
 
 .hljs-string,
@@ -55,7 +55,7 @@ hue-6-2: #c18401
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #50a14f;
+  color: #7CC9AA;
 }
 
 .hljs-built_in,
@@ -80,7 +80,7 @@ hue-6-2: #c18401
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #4078f2;
+  color: #96C0E6;
 }
 
 .hljs-emphasis {
