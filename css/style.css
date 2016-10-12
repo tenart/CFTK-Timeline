@@ -381,7 +381,7 @@ input.litem {
 #output {
     background: #ffffff;
     border: 1px solid #e6e6e6;
-    border-radius: 2px;
+    border-radius: 4px;
     font-family: 'Inconsolata', monospace;
     display: none;
     padding: 20px;
