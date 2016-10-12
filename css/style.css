@@ -401,7 +401,7 @@ input.litem {
     width: 70px;
     margin-top: 20px;
     border-radius: 4px;
-    background: rgba(0, 0, 0, 0.2) url(../no-image-96.png) center center no-repeat;
+    background: rgba(0, 0, 0, 0.1) url(../no-image-96.png) center center no-repeat;
     background-size: 20px;
 }
 
@@ -414,6 +414,7 @@ input.litem {
     border-radius: 4px;
     background-image: url();
     background-size: cover;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
