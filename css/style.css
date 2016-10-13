@@ -424,8 +424,8 @@ input.litem {
 .build_dark input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.7);
 }
-.build_dark input::-moz-placeholder { /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.7);
+.build_dark input::-moz-placeholder { /* Firefox 19+ renders placeholder text translucent*/
+  color: white;
 }
 .build_dark input:-ms-input-placeholder { /* IE 10+ */
   color: rgba(255, 255, 255, 0.7);
